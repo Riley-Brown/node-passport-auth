@@ -14,9 +14,17 @@ mongoose.connect(db, {
   })
   .then(() => console.log('mongo db connected'))
   .catch(err => console.log(err))
+
+
 /* ===== EJS MIDDLEWARE ===== */
 app.use(expressLayouts);
 app.set('view engine', 'ejs');
+
+
+/* ===== BODYPARSER MIDDLEWARE ===== */
+app.use(express.urlencoded({
+  extended: false
+}))
 
 
 /* ===== ROUTES ===== */
