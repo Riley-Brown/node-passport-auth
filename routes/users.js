@@ -30,7 +30,7 @@ router.post('/register', (req, res) => {
   // check if passwords match
   if (password !== password2) {
     errors.push({
-      mesg: 'Passwords do not match'
+      msg: 'Passwords do not match'
     })
   }
 
@@ -52,7 +52,7 @@ router.post('/register', (req, res) => {
   } else {
     res.send('pass')
   }
-  res.send('hello')
+
 })
 
 module.exports = router;
